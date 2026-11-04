@@ -1653,7 +1653,7 @@ body.opened .cover-mono mask path {
 }
 
 .invite-card .inviters .family {
-  font-size: max(4.8cqw, 16px);
+  font-size: max(3.8cqw, 16px);
   font-weight: 500;
   line-height: 1.8;
   color: var(--brown);
