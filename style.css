@@ -1550,7 +1550,7 @@ body.opened .cover-mono mask path {
 
 .timeline-title {
     font-size: 26px;
-    margin: 0;
+    margin: 15px;
     color: #4a3b32;
     font-weight: 600;
 }
