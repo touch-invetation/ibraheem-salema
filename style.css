@@ -1012,8 +1012,8 @@ iframe {
 
 .final-names {
   margin-top: 8px;
-  font-family: var(--font-title);
-  font-size: 34px;
+  font-family: amiri;
+  font-size: 42px;
   font-weight: 700;
   line-height: 1.3;
   color: var(--brown-dark);
@@ -1641,4 +1641,227 @@ body.opened .cover-mono mask path {
     font-size: 14px;
     color: #736356;
     line-height: 1.2;
+}
+
+/* ===== ترتيب بطاقة الدعوة: نص الدعوة أكبر والموعد أصغر ===== */
+.invite-card .small-label {
+  font-family: var(--font-title);
+  font-size: max(7.5cqw, 24px);
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--brown-dark);
+}
+
+.invite-card .inviters .family {
+  font-size: max(4.8cqw, 16px);
+  font-weight: 500;
+  line-height: 1.8;
+  color: var(--brown);
+}
+
+.invite-card .inviters .family.name {
+  font-family: var(--font-title);
+  font-size: max(6.4cqw, 21px);
+  font-weight: 700;
+  line-height: 1.7;
+  color: var(--brown-dark);
+}
+
+.invite-card .info p {
+  gap: 2cqw;
+  font-size: max(2.9cqw, 11.5px);
+  line-height: 1.7;
+}
+
+
+/* ===== خط الأسماء + الموعد والمكان بجانب بعض مع أيقونات ===== */
+.invite-card .small-label,
+.invite-card .inviters .family.name {
+  font-family: "Amiri", "Tajawal", serif;
+}
+
+.invite-card .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5cqw;
+  width: 100%;
+}
+
+.invite-card .info-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8cqw;
+  width: 100%;
+}
+
+.invite-card .info-row .info-item + .info-item {
+  position: relative;
+}
+
+.invite-card .info-row .info-item + .info-item::before {
+  content: "";
+  position: absolute;
+  right: -4cqw;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background: var(--gold-soft);
+}
+
+.invite-card .info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6cqw;
+}
+
+.invite-card .info-item i {
+  font-size: max(5.5cqw, 18px);
+  line-height: 1;
+  color: var(--gold);
+}
+
+.invite-card .info-main {
+  font-size: max(3.3cqw, 12.5px);
+  font-weight: 700;
+  color: var(--brown-dark);
+}
+
+.invite-card .info-sub {
+  font-size: max(2.9cqw, 11.5px);
+  color: var(--brown);
+}
+
+
+/* ===== اليوم والوقت والمكان بصف واحد ===== */
+.invite-card .info-row {
+  gap: 6cqw;
+}
+
+.invite-card .info-row .info-item + .info-item::before {
+  right: -3cqw;
+}
+
+
+/* ===== اسم العائلة تحت الاسم في الغلاف ===== */
+.cover-names {
+  top: 50%;
+  height: auto;
+  width: 72%;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cover-names img {
+  height: auto;
+  width: 100%;
+}
+
+.cover-names .cover-family {
+  display: block;
+  margin-top: 2px;
+  font-family: var(--font-title);
+  font-size: clamp(30px, 9.5vw, 46px);
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--brown-dark);
+  opacity: 0;
+}
+
+body.opened .cover-names .cover-family {
+  animation: namesImgIn 3s cubic-bezier(0.22, 0.61, 0.36, 1) 3.6s both;
+}
+
+body.drawn .cover-names .cover-family {
+  animation: none !important;
+  opacity: 1;
+  filter: none;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cover-names .cover-family { opacity: 1; animation: none !important; }
+}
+
+
+/* تكبير اسم العائلة */
+.cover-names .cover-family {
+  font-size: clamp(44px, 14vw, 66px);
+  margin-top: 0;
+  line-height: 1.3;
+}
+
+
+/* اسم العائلة: خط أميري وحجم أكبر */
+.cover-names {
+  top: 48%;
+}
+
+.cover-names .cover-family {
+  font-family: "Amiri", "Tajawal", serif;
+  font-size: clamp(54px, 17vw, 76px);
+  font-weight: 700;
+  margin-top: 2px;
+  line-height: 1.25;
+}
+
+
+/* ===== تكبير خط برنامج الحفل ===== */
+.timeline-title {
+  font-size: 38px;
+}
+
+.timeline-subtitle {
+  font-size: 17px;
+  margin-bottom: 40px;
+}
+
+.timeline-container {
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  margin-bottom: 42px;
+}
+
+.timeline-icon,
+.timeline-right-side .fa-solid {
+  font-size: 32px;
+}
+
+.timeline-icon {
+  width: 38px;
+}
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  margin-left: -6px;
+}
+
+.timeline-left-side {
+  padding-right: 16px;
+}
+
+.timeline-left-side .time {
+  font-size: 21px;
+  line-height: 1.3;
+}
+
+.timeline-left-side .title {
+  margin-top: 5px;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+
+/* توسيط برنامج الحفل: النص أعرض من الأيقونات فكان ماشي لليسار، نزحزح المجموعة لليمين */
+.timeline-container {
+  transform: translateX(34px);
 }
