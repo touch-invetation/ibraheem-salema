@@ -82,20 +82,7 @@
     </div>
 
     <div class="wedding">
-        <!-- Slide 1: الغلاف (نفس التصميم المرجعي، وكل عنصر بيترسم لحاله لما تنفتح الستارة) -->
-        <div class="contain reveal cover-card">
-            <div class="slide-1">
-                <span class="cover-flora l" aria-hidden="true"></span>
-                <span class="cover-flora r" aria-hidden="true"></span>
-                <span class="cover-vtext">حفل زفاف</span>
-                <span class="cover-line"></span>
-                <div class="cover-date" dir="ltr"><span>12</span><span>12</span><span>26</span></div>
-                <h1 class="cover-names" aria-label="ابراهيم الزعابي"><b class="cover-family">ابراهيم</b><b class="cover-family">الزعابي</b></h1>
-                <p class="cover-dua">بَارَكَ اللَّهُ لَهُمَا وَبَارَكَ عَلَيْهِمَا وَجَمَعَ بَيْنَهُمَا فِي خَيْرٍ</p>
-                  
-                
-            </div>
-        </div>
+
 
         <!-- Slide 2: بطاقة الدعوة -->
         <div class="slide-2 reveal">
@@ -213,19 +200,6 @@
 
         </div>
 
-        <div class="slide-4 slide-countdown">
-            <div class="contain reveal">
-                <div class="countdown-container">
-                    <h3>العدّ التنازلي لحفل الزفاف</h3>
-                    <div class="countdown-timer">
-                        <div class="time-box"><span id="days">00</span><span class="label">أيام</span></div>
-                        <div class="time-box"><span id="hours">00</span><span class="label">ساعات</span></div>
-                        <div class="time-box"><span id="minutes">00</span><span class="label">دقائق</span></div>
-                        <div class="time-box"><span id="seconds">00</span><span class="label">ثواني</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- Slide 3 -->
         <div class="slide-3">
@@ -233,6 +207,7 @@
                 <p class="section-title">الموقع</p>
                 <div class="ornament"><i></i></div>
                 <p class="venue-name">فندق روز وود</p>
+                <p class="venue-area">صالة ياسمين - للنساء</p>
                 <p class="venue-area">صالة زنبق - للرجال</p>
                 <p class="venue-area">جزيرة ماريا - ابوظبي</p>
                 <iframe
@@ -305,9 +280,9 @@
         <div class="slide-7">
             <div class="contain reveal flora flora-final">
                 <div class="ornament"><i></i></div>
-                <p class="final-names">ابراهيم الزعابي</p>
-                <p class="final-date" dir="ltr">12 . 12 . 2026</p>
-                <i class="bi bi-heart-fill heart-ico"></i>
+                <p class="final-names">شكرا لكم</p>
+                <p class="final-date" dir="ltr">بانتظاركم</p>
+                <img src="./monogram1.png" alt="">
             </div>
         </div>
     </div>
@@ -351,13 +326,13 @@
             }
 
             playYouTubeAudio();
-            startHeartRain();
+            if (typeof startHeartRain === 'function') startHeartRain();   // الدالة غير موجودة بالملف، فلا نوقف باقي الكود
         }
 
-        // نستنى لين يخلص رسم الغلاف قبل ما يبدأ التمرير التلقائي
+        // بعد ما تنفتح الستارة وتظهر بطاقة الدعوة بيبدأ التمرير التلقائي
         setTimeout(() => {
             startAutoScroll();
-        }, 9500);
+        }, 4000);
     }
 
     // تشغيل وإيقاف الموسيقى مع تحديث الموجات الصوتية
