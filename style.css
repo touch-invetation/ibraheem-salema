@@ -1646,7 +1646,7 @@ body.opened .cover-mono mask path {
 /* ===== ترتيب بطاقة الدعوة: نص الدعوة أكبر والموعد أصغر ===== */
 .invite-card .small-label {
   font-family: var(--font-title);
-  font-size: max(7.5cqw, 24px);
+  font-size: max(6.5cqw, 24px);
   font-weight: 700;
   line-height: 1.4;
   color: var(--brown-dark);
